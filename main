@@ -1,0 +1,8 @@
+import sqlite3
+from flask import Flask, render_template, request,url_for
+
+app = Flask(__name__)
+            
+@app.route('/enternew')
+def new_student():
+    return render_template('student.html')
