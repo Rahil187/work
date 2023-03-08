@@ -1,0 +1,38 @@
+{%extends"base.html"%}
+{%block body%}
+<title>Student Records</title>
+
+<head>
+<h1>Student Records</h1>
+
+<div class="controls">
+    <ul>
+        <li><button class="buttons"><a href="/enternew">Add Student</a></li>
+        <li><button class="buttons"><a href="">Delete Student</a></li>
+        <li><button class="buttons"><a href="/edit">Edit Student</a></li>
+    </ul>
+</div>
+
+</head>
+<body>
+    
+
+<br>
+<div id="data">
+    <table id="students" border = 1>
+        <thead>
+            <td>Name</td>
+            <td>Address</td>
+            <td>id</td>
+        </thead>
+        {% for row in rows %}
+            <tr>
+                <td>{{row["name"]}}</td>
+                <td>{{row["addr"]}}</td>
+                <td>{{row["id"]}}</td>
+            </tr>
+        {% endfor %}
+     </table>
+</div>
+</body>
+{%endblock%}
